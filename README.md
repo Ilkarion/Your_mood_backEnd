@@ -1,11 +1,11 @@
 # Your_mood_backEnd
 
 ##Stored data:
-array of objects(Example):
+array of objects:
 {
-"nameTask": string,
-"describtion": string,
-"status": string(false/in progress/completed)
+  "name": "Sleep 8 hours",
+  "desc": "Your goal is to sleep minimum 8 hours all week",
+  "status": "false"
 }
 
 ##API requests:
