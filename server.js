@@ -1,10 +1,20 @@
 import e from "express";
 import { todos } from "./starterArray.js";
+import cors from "cors"
 
 const app = e();
 const PORT = 1234;
 
-// ✅ Нужно стоять до всех маршрутов
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000",
+      "https://your-mood-five.vercel.app",
+    ],
+    methods: ["GET", "POST", "PATCH", "DELETE", "PUT", "OPTIONS"],
+    allowedHeaders: ["Content-Type"],
+  })
+);
 app.use(e.json());
 
 let arrayTodo = todos;
