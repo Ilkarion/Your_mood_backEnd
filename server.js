@@ -38,7 +38,7 @@ app.patch("/api/todos/change", (req, res) => {
     const nameTodo = req.body.name.toLowerCase()
     const newStatus = req.body.newStatus
 
-    const task = arrayTodo.find((elem) => nameTodo === elem.nameTask)
+    const task = arrayTodo.find((elem) => nameTodo === elem.nameTask.toLowerCase())
 
     if(!task) res.status(404).json({"message": "Todo with this name not found"})
     
